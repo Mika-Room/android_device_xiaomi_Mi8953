@@ -10,7 +10,9 @@ include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 DEVICE_PATH := device/xiaomi/Mi8953
 
 # Asserts
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := mi8953,ysl,mido,vince,Mi8953
+
 
 # Display
 TARGET_SCREEN_DENSITY := 267
