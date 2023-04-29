@@ -1,0 +1,2 @@
+allow init_xiaomi sysfs_mi8953_mach:dir r_dir_perms;
+allow init_xiaomi sysfs_mi8953_mach:file r_file_perms;
