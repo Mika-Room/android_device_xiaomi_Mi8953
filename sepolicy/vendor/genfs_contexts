@@ -1,3 +1,6 @@
+# Mach
+genfscon sysfs /xiaomi-msm8953-mach	u:object_r:sysfs_mi8953_mach:s0
+
 # K4.19 wakeup sources
 genfscon sysfs /devices/virtual/misc/msm_amrwbplus/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup u:object_r:sysfs_wakeup:s0

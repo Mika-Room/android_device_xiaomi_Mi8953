@@ -1,0 +1,2 @@
+# Mach
+type sysfs_mi8953_mach, fs_type, sysfs_type;
