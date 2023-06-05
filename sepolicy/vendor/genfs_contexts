@@ -27,6 +27,9 @@ genfscon sysfs /devices/virtual/misc/msm_amrwb/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_evrc/wakeup u:object_r:sysfs_wakeup:s0
 
+# Power - Misc
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8950@2:bcl@4200/power_supply/fg_adc	u:object_r:sysfs_battery_supply:s0
+
 # Kernel 4.19 - Wakeup - Camera
 genfscon sysfs /devices/platform/soc/1b0c000.qcom,cci/1b0c000.qcom,cci:qcom,camera@0/video4linux/video1/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1b0c000.qcom,cci/1b0c000.qcom,cci:qcom,camera@2/video4linux/video2/wakeup u:object_r:sysfs_wakeup:s0
