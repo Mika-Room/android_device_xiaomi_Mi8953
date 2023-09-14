@@ -17,6 +17,7 @@ static const variant_info_t ysl_info = {
     .marketname = "",
     .model = "Redmi S2",
     .build_fingerprint = "",
+    .dpi = 260,
 };
 
 static const variant_info_t vince_info = {
@@ -25,6 +26,7 @@ static const variant_info_t vince_info = {
     .marketname = "",
     .model = "Redmi 5 plus",
     .build_fingerprint = "",
+    .dpi = 440,
 };
 
 static const variant_info_t mido_info = {
@@ -33,6 +35,7 @@ static const variant_info_t mido_info = {
     .marketname = "",
     .model = "Redmi Note 4",
     .build_fingerprint = "",
+    .dpi = 420,
 };
 
 static void determine_device()
