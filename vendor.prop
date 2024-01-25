@@ -5,7 +5,7 @@ vendor.audio.feature.fluence.enable=true
 
 # Xiaomi Mi8953 - Bluetooth
 bluetooth.le.disable_apcf_extended_features=1
-bluetooth.sco.disable_enhanced_connection=1
+bluetooth.sco.disable_enhanced_connection=true
 
 # Xiaomi Mi8953 - SoC
 ro.soc.manufacturer=Qualcomm
