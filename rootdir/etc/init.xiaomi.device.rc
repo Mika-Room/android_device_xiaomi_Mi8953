@@ -1,3 +1,9 @@
+service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
+    class early_hal
+    user root
+    group root
+    oneshot
+
 # ADSP
 on boot
     stop vendor.adsprpcd
