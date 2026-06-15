@@ -1,0 +1,60 @@
+# Not appended blobs from ysl-user 9 PKQ1.181203.001 V12.0.2.0.PEFMIXM release-keys
+# daisy Package version: daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
+# PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
+# olive (Pie) Package version: olive-user 9 PKQ1.190319.001 V11.0.11.0.PCNMIXM release-keys
+# FP3 Package version: Fairphone/FP3/FP3:11/8901.4.A.0010/gms-f74c58a8:user/release-keys
+
+# ADSP modules - Dirac - from daisy
+-vendor/lib/rfsa/adsp/dirac_resource.dar;DISABLE_DEPS
+-vendor/lib/rfsa/adsp/libdirac-capiv2.so;DISABLE_DEPS
+
+# Audio dirac - from mido
+-vendor/lib/libDiracAPI_SHARED.so;DISABLE_DEPS
+-vendor/lib/soundfx/libdirac.so;DISABLE_DEPS
+vendor/etc/diracmobile.config
+
+# Charger - from daisy
+-vendor/bin/hvdcp_opti;DISABLE_DEPS
+
+# Firmware (GPU) - from daisy
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+
+# Gatekeeper - from daisy
+-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti;DISABLE_DEPS
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so;DISABLE_DEPS
+
+# IMS (uceService) - from olive (Pie)
+-system/app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk
+system/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
+-system/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so;DISABLE_DEPS
+
+# Keymaster - from daisy
+-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti;DISABLE_DEPS
+vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
+-vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so;DISABLE_DEPS
+-vendor/lib64/libkeymasterdeviceutils.so;DISABLE_DEPS
+-vendor/lib64/libkeymasterprovision.so;DISABLE_DEPS
+-vendor/lib64/libkeymasterutils.so;DISABLE_DEPS
+
+# Perf configs - from FP3
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/commonsysnodesconfigs.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+
+# Sensors - from LA.UM.9.6.3.r1-06200-89xx.0
+-vendor/bin/sensors.qti;DISABLE_DEPS
+-vendor/lib/libsensor1.so;DISABLE_DEPS
+-vendor/lib64/libsensor1.so;DISABLE_DEPS
+
+# Sensors (SSC) - from daisy
+-vendor/lib64/libsensor_reg.so;DISABLE_DEPS
+-vendor/lib64/sensors.ssc.so;DISABLE_DEPS

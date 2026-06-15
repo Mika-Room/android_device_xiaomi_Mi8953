@@ -1,0 +1,33 @@
+# ADSP
+on boot
+    stop vendor.adsprpcd
+
+# DT2W
+on boot
+    write /proc/sys/dev/xiaomi_msm8953_touchscreen/enable_dt2w 1 
+
+# Fingerprint
+on boot
+    # add for goodix 
+    chown system system /dev/goodix_fp
+    chmod 0644 /dev/goodix_fp
+
+    # add for fpc 
+    chown system system /sys/devices/platform/soc/soc:fpc1020/compatible_all
+    chmod 0664 /sys/devices/platform/soc/soc:fpc1020/compatible_all
+    chown system system /sys/devices/platform/soc/soc:fpc1020/irq
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/irq
+    chown system system /sys/devices/platform/soc/soc:fpc1020/hw_reset
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/hw_reset
+    chown system system /sys/devices/platform/soc/soc:fpc1020/wakeup_enable
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/wakeup_enable
+    chown system system /sys/devices/platform/soc/soc:fpc1020/fingerdown_wait
+    chmod 0660 /sys/devices/platform/soc/soc:fpc1020/fingerdown_wait
+
+on post-fs-data
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /data/vendor/fpc 0770 system system
+
+# IR
+on boot
+    chown system system /dev/spidev5.1
