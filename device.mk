@@ -18,6 +18,11 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     HapticOverlay
 
+PRODUCT_PACKAGES += \
+    xiaomi_mido_overlay \
+    xiaomi_vince_overlay \
+    xiaomi_ysl_overlay
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1440
 TARGET_SCREEN_WIDTH := 720
