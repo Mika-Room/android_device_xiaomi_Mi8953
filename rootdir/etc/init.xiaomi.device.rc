@@ -4,6 +4,50 @@ service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
     group root
     oneshot
 
+# Override AOSP Keymaster & gatekeeper 
+service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+    override
+    interface android.hardware.gatekeeper@1.0::IGatekeeper default
+    class hal
+    user system
+    group system
+    disabled
+
+service vendor.keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-service
+    override
+    interface android.hardware.keymaster@3.0::IKeymasterDevice default
+    class early_hal
+    user nobody
+    group drmrpc
+    disabled
+
+# Override QTI Keymaster & gatekeeper
+service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+    override
+    class early_hal
+    user system
+    group system
+    disabled
+
+service keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+    override
+    class early_hal
+    user system
+    group system drmrpc
+    disabled
+
+on property:ro.vendor.xiaomi.device=vince
+    start vendor.gatekeeper-1-0
+    start vendor.keymaster-3-0
+
+on property:ro.vendor.xiaomi.device=ysl
+    start gatekeeper-1-0
+    start keymaster-3-0
+
+on property:ro.vendor.xiaomi.device=mido
+    start vendor.gatekeeper-1-0
+    start vendor.keymaster-3-0
+
 # ADSP
 on boot
     stop vendor.adsprpcd

@@ -24,6 +24,9 @@ vendor/firmware/a506_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
+# Gatekeeper - from FP3
+-vendor/lib64/hw/gatekeeper.msm8953.so;DISABLE_DEPS
+
 # Gatekeeper - from daisy
 -vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti;DISABLE_DEPS
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
@@ -33,6 +36,9 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 -system/app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk
 system/framework/com.qualcomm.qti.uceservice-V2.0-java.jar:system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
 -system/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so;DISABLE_DEPS
+
+# Keystore - from FP3
+-vendor/lib64/hw/keystore.msm8953.so;DISABLE_DEPS
 
 # Keymaster - from daisy
 -vendor/bin/hw/android.hardware.keymaster@3.0-service-qti;DISABLE_DEPS
