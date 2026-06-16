@@ -13,8 +13,8 @@ case "$(cat /sys/xiaomi-msm8953-mach/codename)" in
 		# Device Info
 		setprop ro.vendor.xiaomi.device ysl
 		# Audio
-		setprop persist.vendor.audio.fluence.speaker=true
-		setprop persist.vendor.audio.fluence.voicecall=true
+		setprop persist.vendor.audio.fluence.speaker true
+		setprop persist.vendor.audio.fluence.voicecall true
 		setprop persist.vendor.audio.fluence.voicerec false
 		set_acdb_path_props ysl
 		;;
@@ -22,9 +22,9 @@ case "$(cat /sys/xiaomi-msm8953-mach/codename)" in
 		# Device Info
 		setprop ro.vendor.xiaomi.device vince
 		# Audio
-		setprop persist.vendor.audio.fluence.speaker=true
-        setprop persist.vendor.audio.fluence.voicecall=true
-        setprop persist.vendor.audio.fluence.voicerec=false
+		setprop persist.vendor.audio.fluence.speaker true
+        setprop persist.vendor.audio.fluence.voicecall true
+        setprop persist.vendor.audio.fluence.voicerec false
 		set_acdb_path_props vince
 		;;
 	"mido")
