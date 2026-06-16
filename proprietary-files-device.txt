@@ -32,3 +32,9 @@ vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:vendor/etc/acdbdata/vince/QRD_Hdmi_cal
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb:vendor/etc/acdbdata/vince/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/vince/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:vendor/etc/acdbdata/vince/QRD_workspaceFile.qwsp
+
+# Firmware (Audio) - vince
+system/etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin
+
+# Firmware (Touchscreen) - vince
+system/etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin
