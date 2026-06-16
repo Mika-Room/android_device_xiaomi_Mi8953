@@ -1,0 +1,34 @@
+# mido Package version: xiaomi/mido/mido:7.0/NRD90M/V11.0.2.0.NCFMIXM:user/release-keys
+# vince Package version: vince-user 8.1.0 OPM1.171019.019 V11.0.3.0.OEGCNXM release-keys
+# ysl Package version: ysl-user 9 PKQ1.181203.001 V12.0.2.0.PEFMIXM release-keys
+
+# Audio ACDB - mido
+etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb:vendor/etc/acdbdata/mido/QRD_Bluetooth_cal.acdb
+etc/acdbdata/QRD/QRD_General_cal.acdb:vendor/etc/acdbdata/mido/QRD_General_cal.acdb
+etc/acdbdata/QRD/QRD_Global_cal.acdb:vendor/etc/acdbdata/mido/QRD_Global_cal.acdb
+etc/acdbdata/QRD/QRD_Handset_cal.acdb:vendor/etc/acdbdata/mido/QRD_Handset_cal.acdb
+etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:vendor/etc/acdbdata/mido/QRD_Hdmi_cal.acdb
+etc/acdbdata/QRD/QRD_Headset_cal.acdb:vendor/etc/acdbdata/mido/QRD_Headset_cal.acdb
+etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/mido/QRD_Speaker_cal.acdb
+
+# Audio ACDB - ysl
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:vendor/etc/acdbdata/ysl/MTP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb:vendor/etc/acdbdata/ysl/MTP_General_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb:vendor/etc/acdbdata/ysl/MTP_Global_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb:vendor/etc/acdbdata/ysl/MTP_Handset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb:vendor/etc/acdbdata/ysl/MTP_Hdmi_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb:vendor/etc/acdbdata/ysl/MTP_Headset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb:vendor/etc/acdbdata/ysl/MTP_Speaker_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp:vendor/etc/acdbdata/ysl/MTP_workspaceFile.qwsp
+vendor/etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/ysl/adsp_avs_config.acdb
+
+# Audio ACDB - vince
+vendor/etc/acdbdata/adsp_avs_config.acdb:vendor/etc/acdbdata/vince/adsp_avs_config.acdb
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb:vendor/etc/acdbdata/vince/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb:vendor/etc/acdbdata/vince/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb:vendor/etc/acdbdata/vince/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb:vendor/etc/acdbdata/vince/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb:vendor/etc/acdbdata/vince/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb:vendor/etc/acdbdata/vince/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/vince/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:vendor/etc/acdbdata/vince/QRD_workspaceFile.qwsp
