@@ -15,6 +15,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from Mi8953 device
 $(call inherit-product, device/xiaomi/Mi8953/device.mk)
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 # Kernel
 TARGET_KERNEL_VERSION := 4.19
 
