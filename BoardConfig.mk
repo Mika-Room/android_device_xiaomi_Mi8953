@@ -26,9 +26,6 @@ TARGET_OTA_ASSERT_DEVICE := mi8953,ysl,mido,vince,Mi8953
 # Display
 TARGET_SCREEN_DENSITY := 267
 
-# Filesystem
-TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/config.fs
-
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
