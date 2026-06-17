@@ -54,16 +54,11 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/blank.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/camera_config.xml
+    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_VENDOR)/etc/camera/.placeholder
 
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/)
-
-# Sensors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/blankfile:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/sensors/,$(TARGET_COPY_OUT_VENDOR)/etc/sensors/)
 
 # Recovery
 PRODUCT_COPY_FILES += \

@@ -38,3 +38,12 @@ system/etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin
 
 # Firmware (Touchscreen) - vince
 system/etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin
+
+# Sensor config - vince
+vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/overlayfs/vince/etc/sensors/sensor_def_qcomdev.conf
+
+# Sensor config - ysl
+vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/overlayfs/ysl/etc/sensors/sensor_def_qcomdev.conf
+
+# Sensor config - mido
+vendor/etc/sensors/sensor_def_qcomdev.conf:vendor/overlayfs/mido/etc/sensors/sensor_def_qcomdev.conf
