@@ -1,7 +1,6 @@
 # IR
 /dev/peel_ir					u:object_r:ir_device:s0
 /dev/spidev5\.1					u:object_r:lirc_device:s0
-/dev/lirc[0-9]*                 u:object_r:lirc_device:s0
 
 # OverlayFS
 /(vendor|system/vendor)/overlayfs/[0-9a-z]+/etc/sensors/sensor_def_qcomdev.conf		u:object_r:vendor_configs_file:s0
