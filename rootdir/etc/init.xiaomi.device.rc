@@ -54,12 +54,15 @@ on boot
 
 # Audio
 on property:ro.vendor.xiaomi.device=vince
+    setprop vendor.audio.mixer_xml.path /odm/etc/vince_mixer_paths_mtp.xml
     setprop vendor.audio.platform_info_xml.path /odm/etc/vince_audio_platform_info_intcodec.xml
 
 on property:ro.vendor.xiaomi.device=ysl
+    setprop vendor.audio.mixer_xml.path /odm/etc/ysl_mixer_paths_mtp.xml
     setprop vendor.audio.platform_info_xml.path /odm/etc/ysl_audio_platform_info_intcodec.xml
 
 on property:ro.vendor.xiaomi.device=mido
+    setprop vendor.audio.mixer_xml.path /odm/etc/mido_mixer_paths_mtp.xml
     setprop vendor.audio.platform_info_xml.path /odm/etc/mido_audio_platform_info_intcodec.xml
 
 # IR
