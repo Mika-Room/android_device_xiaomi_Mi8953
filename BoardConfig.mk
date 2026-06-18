@@ -25,9 +25,11 @@ DEVICE_PATH := device/xiaomi/Mi8953
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := mi8953,ysl,mido,vince,Mi8953
 
-
 # Display
 TARGET_SCREEN_DENSITY := 267
+
+# Fastboot
+TARGET_BOARD_FASTBOOT_INFO_FILE := $(DEVICE_PATH)/fastboot-info.txt
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
