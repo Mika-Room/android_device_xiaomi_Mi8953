@@ -20,7 +20,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Kernel
-TARGET_KERNEL_VERSION := 4.19
+TARGET_KERNEL_VERSION := 4.9
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Mi8953
