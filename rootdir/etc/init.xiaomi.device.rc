@@ -65,6 +65,18 @@ on property:ro.vendor.xiaomi.device=mido
     setprop vendor.audio.mixer_xml.path /odm/etc/mido_mixer_paths_mtp.xml
     setprop vendor.audio.platform_info_xml.path /odm/etc/mido_audio_platform_info_intcodec.xml
 
+# Camera
+service vendor.qcamerasvr /odm/bin/mm-qcamera-daemon
+    override
+    class late_start
+    user camera
+    group camera system inet input graphics
+
+on property:ro.vendor.xiaomi.device=ysl
+    setprop ro.hardware.camera ysl
+on property:ro.vendor.xiaomi.device=vince
+    setprop ro.hardware.camera vince
+
 # IR
 on init
     # peel
@@ -79,10 +91,22 @@ on early-boot && property:ro.vendor.xiaomi.device=ysl
 
 # Sensors
 on property:ro.vendor.xiaomi.device=vince
+    # General
+    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/vince/lib/:/odm/lib
+
+    # Camera
+    mount overlay overlay /odm/etc/camera ro lowerdir=/vendor/etc/overlayfs/vince/camera/:/odm/etc/camera
+
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/etc/overlayfs/vince/sensors/:/vendor/etc/sensors
 
 on property:ro.vendor.xiaomi.device=ysl
+    # General
+    mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/ysl/lib/:/odm/lib
+
+    # Camera
+    mount overlay overlay /odm/etc/camera ro lowerdir=/vendor/etc/overlayfs/ysl/camera/:/odm/etc/camera
+
     # Sensor
     mount overlay overlay /vendor/etc/sensors ro lowerdir=/vendor/etc/overlayfs/ysl/sensors/:/vendor/etc/sensors
 
