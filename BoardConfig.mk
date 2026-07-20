@@ -39,10 +39,16 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_xiaomi_mi8
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boot_devices=soc/7824900.sdhci
+TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_KERNEL_CONFIG := \
+        msm8953-perf_defconfig \
+        mi8953.config
+else
 TARGET_KERNEL_CONFIG := \
         vendor/msm8953-perf_defconfig \
-        vendor/xiaomi/mi8953.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
+        vendor/mi8953.config
+endif
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
