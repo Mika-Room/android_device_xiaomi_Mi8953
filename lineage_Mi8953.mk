@@ -12,15 +12,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Kernel
+TARGET_KERNEL_VERSION := 4.9
+
 # Inherit from Mi8953 device
 $(call inherit-product, device/xiaomi/Mi8953/device.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
-
-# Kernel
-TARGET_KERNEL_VERSION := 4.9
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Mi8953

@@ -42,12 +42,12 @@ BOARD_KERNEL_CMDLINE += androidboot.android_dt_dir=/non-existent androidboot.boo
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8953
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 TARGET_KERNEL_CONFIG := \
-        msm8953-perf_defconfig \
-        mi8953.config
-else
-TARGET_KERNEL_CONFIG := \
         vendor/msm8953-perf_defconfig \
         vendor/mi8953.config
+else
+TARGET_KERNEL_CONFIG := \
+        msm8953-perf_defconfig \
+        mi8953.config
 endif
 
 # Partitions
