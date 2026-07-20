@@ -33,6 +33,12 @@ vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb:vendor/etc/acdbdata/vince/QRD_Heads
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb:vendor/etc/acdbdata/vince/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp:vendor/etc/acdbdata/vince/QRD_workspaceFile.qwsp
 
+# ConsumerIR - from onc
+-lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.spidev.so;DISABLE_DEPS
+
+# ConsumerIR - from daisy
+-lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.peel.so;DISABLE_DEPS
+
 # Firmware (Audio) - vince
 system/etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin
 

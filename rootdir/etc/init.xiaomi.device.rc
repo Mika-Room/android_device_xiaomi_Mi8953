@@ -66,8 +66,16 @@ on property:ro.vendor.xiaomi.device=mido
     setprop vendor.audio.platform_info_xml.path /odm/etc/mido_audio_platform_info_intcodec.xml
 
 # IR
-on boot
+on init
+    # peel
+    chown system system /dev/peel_ir
+    # spidev
     chown system system /dev/spidev5.1
+
+on early-boot && property:ro.vendor.xiaomi.series=vince
+    setprop ro.hardware.consumerir peel
+on early-boot && property:ro.vendor.xiaomi.device=ysl
+    setprop ro.hardware.consumerir spidev
 
 # Sensors
 on property:ro.vendor.xiaomi.device=vince
