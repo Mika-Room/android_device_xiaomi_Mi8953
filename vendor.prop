@@ -7,6 +7,9 @@ vendor.audio.feature.fluence.enable=true
 bluetooth.le.disable_apcf_extended_features=1
 bluetooth.sco.disable_enhanced_connection=true
 
+# Xiaomi Mi8953 - Encryption
+ro.crypto.volume.contents_mode=aes-256-xts
+
 # Xiaomi Mi8953 - SoC
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8953
