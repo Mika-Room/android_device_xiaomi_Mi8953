@@ -4,6 +4,19 @@ service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
     group root
     oneshot
 
+# Audio
+on property:ro.vendor.xiaomi.device=vince
+    setprop vendor.audio.mixer_xml.path /odm/etc/vince_mixer_paths_mtp.xml
+    setprop vendor.audio.platform_info_xml.path /odm/etc/vince_audio_platform_info_intcodec.xml
+
+on property:ro.vendor.xiaomi.device=ysl
+    setprop vendor.audio.mixer_xml.path /odm/etc/ysl_mixer_paths_mtp.xml
+    setprop vendor.audio.platform_info_xml.path /odm/etc/ysl_audio_platform_info_intcodec.xml
+
+on property:ro.vendor.xiaomi.device=mido
+    setprop vendor.audio.mixer_xml.path /odm/etc/mido_mixer_paths_mtp.xml
+    setprop vendor.audio.platform_info_xml.path /odm/etc/mido_audio_platform_info_intcodec.xml
+
 # Override AOSP Keymaster & gatekeeper 
 service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     override
@@ -52,19 +65,6 @@ on property:ro.vendor.xiaomi.device=mido
 on boot
     stop vendor.adsprpcd
 
-# Audio
-on property:ro.vendor.xiaomi.device=vince
-    setprop vendor.audio.mixer_xml.path /odm/etc/vince_mixer_paths_mtp.xml
-    setprop vendor.audio.platform_info_xml.path /odm/etc/vince_audio_platform_info_intcodec.xml
-
-on property:ro.vendor.xiaomi.device=ysl
-    setprop vendor.audio.mixer_xml.path /odm/etc/ysl_mixer_paths_mtp.xml
-    setprop vendor.audio.platform_info_xml.path /odm/etc/ysl_audio_platform_info_intcodec.xml
-
-on property:ro.vendor.xiaomi.device=mido
-    setprop vendor.audio.mixer_xml.path /odm/etc/mido_mixer_paths_mtp.xml
-    setprop vendor.audio.platform_info_xml.path /odm/etc/mido_audio_platform_info_intcodec.xml
-
 # Camera
 service vendor.qcamerasvr /odm/bin/mm-qcamera-daemon
     override
@@ -84,7 +84,7 @@ on init
     # spidev
     chown system system /dev/spidev5.1
 
-on early-boot && property:ro.vendor.xiaomi.series=vince
+on early-boot && property:ro.vendor.xiaomi.device=vince
     setprop ro.hardware.consumerir peel
 on early-boot && property:ro.vendor.xiaomi.device=ysl
     setprop ro.hardware.consumerir spidev
@@ -92,6 +92,7 @@ on early-boot && property:ro.vendor.xiaomi.device=ysl
 # Sensors
 on property:ro.vendor.xiaomi.device=vince
     # General
+    mount overlay overlay /odm/bin ro lowerdir=/vendor/bin/overlayfs/vince/:/odm/bin
     mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/vince/lib/:/odm/lib
 
     # Camera
@@ -102,6 +103,7 @@ on property:ro.vendor.xiaomi.device=vince
 
 on property:ro.vendor.xiaomi.device=ysl
     # General
+    mount overlay overlay /odm/bin ro lowerdir=/vendor/bin/overlayfs/ysl/:/odm/bin
     mount overlay overlay /odm/lib ro lowerdir=/odm/overlayfs/ysl/lib/:/odm/lib
 
     # Camera
