@@ -20,10 +20,17 @@ $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/Mi8953
+USES_DEVICE_XIAOMI_MI8953 := true
 
 # Asserts
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := mi8953,ysl,mido,vince,Mi8953
+
+# Camera
+#MI8937_CAM_USE_LATEST_CAMERA_STACK := true
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_SUPPORT_HAL1 := false
+endif
 
 # Display
 TARGET_SCREEN_DENSITY := 267
@@ -101,6 +108,7 @@ endif
 VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
 # SELinux
+BOARD_ODM_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/odm
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
